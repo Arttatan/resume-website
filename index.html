@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artem Tatanov - QA Engineer</title>
+    <title>Татанов Артем - QA Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <h1 class="name">Artem Tatanov</h1>
+                <h1 class="name">Татанов Артем</h1>
                 <h2 class="title">QA Engineer</h2>
                 <p class="tagline">
                     QA Engineer с более чем 4 годами опыта. Специализируюсь на тестировании веб, мобильных и десктопных приложений. 
@@ -29,7 +29,7 @@
     <!-- About Me Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">О себе</h2>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="card-icon">📱</div>
@@ -53,7 +53,7 @@
     <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Навыки</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Manual Testing</h3>
@@ -105,7 +105,7 @@
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">Опыт работы</h2>
             <div class="timeline">
                 <!-- Experience 1 -->
                 <div class="timeline-item">
@@ -164,7 +164,7 @@
     <!-- Education Section -->
     <section class="education" id="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Образование</h2>
             <div class="education-grid">
                 <div class="education-item">
                     <h3>Санкт-Петербургский Горный Университет</h3>
@@ -189,30 +189,34 @@
     <!-- Contacts Section -->
     <footer class="contacts" id="contacts">
         <div class="container">
-            <h2 class="section-title">Contacts</h2>
+            <h2 class="section-title">Контакты</h2>
             <div class="contact-links">
                 <a href="tel:+79217972732" class="contact-link">
                     <span class="contact-icon">📞</span>
                     <span>+7 (921) 797-27-32</span>
                 </a>
-                <a href="mailto:artem@example.com" class="contact-link">
+                <a href="mailto:art.tatan@gmail.com" class="contact-link">
                     <span class="contact-icon">✉️</span>
-                    <span>Email</span>
+                    <span>art.tatan@gmail.com</span>
                 </a>
-                <a href="https://linkedin.com/in/artem-tatanov" class="contact-link" target="_blank" rel="noopener">
-                    <span class="contact-icon">💼</span>
-                    <span>LinkedIn</span>
+                <a href="https://t.me/arttatan" class="contact-link" target="_blank" rel="noopener">
+                    <span class="contact-icon">💬</span>
+                    <span>@arttatan</span>
                 </a>
-                <a href="https://github.com/artem-tatanov" class="contact-link" target="_blank" rel="noopener">
+                <a href="https://github.com/Arttatan" class="contact-link" target="_blank" rel="noopener">
                     <span class="contact-icon">💻</span>
                     <span>GitHub</span>
                 </a>
+                <a href="https://gitlab.com/arttatan" class="contact-link" target="_blank" rel="noopener">
+                    <span class="contact-icon">🔷</span>
+                    <span>GitLab</span>
+                </a>
             </div>
-            <p class="copyright">© 2024 Artem Tatanov. All rights reserved.</p>
+            <p class="copyright">© 2024 Татанов Артем. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Smooth scroll script -->
+    <!-- Enhanced scripts -->
     <script>
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -225,6 +229,35 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and timeline items
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll(
+                '.about-card, .skill-category, .education-item, .timeline-item'
+            );
+            
+            animatedElements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(el);
             });
         });
     </script>
