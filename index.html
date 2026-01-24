@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="nav-logo">Татанов Артем</div>
+                <a href="#top" class="nav-logo">Татанов Артем</a>
                 <div class="nav-links">
                     <a href="#experience" class="nav-link">Опыт работы</a>
                     <a href="#skills" class="nav-link">Навыки</a>
@@ -19,16 +19,22 @@
                     <a href="#contacts" class="nav-link">Контакты</a>
                     <a href="#cases" class="nav-link nav-link-disabled" aria-disabled="true">Кейсы</a>
                 </div>
-                <a href="Татанов Артем QA Engineer.pdf" download class="btn-download">
-                    <span class="download-icon">📥</span>
-                    <span>Скачать резюме</span>
-                </a>
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="ru">Rus</button>
+                        <button class="lang-btn" data-lang="en">Eng</button>
+                    </div>
+                    <a href="Татанов Артем QA Engineer.pdf" download class="btn-download">
+                        <span class="download-icon">📥</span>
+                        <span>Скачать резюме</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <header class="header">
+    <header class="header" id="top">
         <div class="container">
             <div class="header-content">
                 <h1 class="name">Татанов Артем</h1>
@@ -49,7 +55,13 @@
     <!-- About Me Section -->
     <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">О себе</h2>
+            <div class="section-header">
+                <div class="section-illustration">
+                    <img src="images/about-icon.png" alt="О себе" class="section-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="section-icon-placeholder" style="display:none;">👤</div>
+                </div>
+                <h2 class="section-title">О себе</h2>
+            </div>
             <div class="about-grid">
                 <div class="about-card">
                     <div class="card-icon">📱</div>
@@ -73,7 +85,13 @@
     <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Навыки</h2>
+            <div class="section-header">
+                <div class="section-illustration">
+                    <img src="images/skills-icon.png" alt="Навыки" class="section-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="section-icon-placeholder" style="display:none;">✅</div>
+                </div>
+                <h2 class="section-title">Навыки</h2>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Manual Testing</h3>
@@ -130,7 +148,13 @@
     <!-- Experience Section -->
     <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Опыт работы</h2>
+            <div class="section-header">
+                <div class="section-illustration">
+                    <img src="images/experience-icon.png" alt="Опыт работы" class="section-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="section-icon-placeholder" style="display:none;">💼</div>
+                </div>
+                <h2 class="section-title">Опыт работы</h2>
+            </div>
             <div class="timeline">
                 <!-- Experience 1 -->
                 <div class="timeline-item">
@@ -186,84 +210,16 @@
         </div>
     </section>
 
-    <!-- QA Interactive Demo Section -->
-    <section class="qa-demo" id="qa-demo">
-        <div class="container">
-            <h2 class="section-title">QA в действии</h2>
-            <div class="qa-widgets">
-                <div class="qa-widget">
-                    <h3>Статус тестов</h3>
-                    <div class="test-status">
-                        <div class="status-item">
-                            <div class="status-indicator status-passed"></div>
-                            <span>Passed: <strong>247</strong></span>
-                        </div>
-                        <div class="status-item">
-                            <div class="status-indicator status-failed"></div>
-                            <span>Failed: <strong>3</strong></span>
-                        </div>
-                        <div class="status-item">
-                            <div class="status-indicator status-skipped"></div>
-                            <span>Skipped: <strong>12</strong></span>
-                        </div>
-                    </div>
-                    <div class="test-progress">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 94.3%"></div>
-                        </div>
-                        <span class="progress-text">94.3% Success Rate</span>
-                    </div>
-                </div>
-                <div class="qa-widget">
-                    <h3>Чек-лист тестирования</h3>
-                    <div class="checklist">
-                        <label class="checklist-item">
-                            <input type="checkbox" checked disabled>
-                            <span>Функциональное тестирование</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox" checked disabled>
-                            <span>Тестирование API</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox" checked disabled>
-                            <span>Кросс-браузерное тестирование</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox" checked disabled>
-                            <span>Мобильное тестирование</span>
-                        </label>
-                        <label class="checklist-item">
-                            <input type="checkbox" checked disabled>
-                            <span>Автоматизация тестов</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="qa-widget">
-                    <h3>Метрики качества</h3>
-                    <div class="metrics">
-                        <div class="metric-item">
-                            <div class="metric-value">0</div>
-                            <div class="metric-label">Дефектов в продакшене</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-value">1000+</div>
-                            <div class="metric-label">Документов обновлено</div>
-                        </div>
-                        <div class="metric-item">
-                            <div class="metric-value">10%</div>
-                            <div class="metric-label">Рост эффективности</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Education Section -->
     <section class="education" id="education">
         <div class="container">
-            <h2 class="section-title">Образование</h2>
+            <div class="section-header">
+                <div class="section-illustration">
+                    <img src="images/education-icon.png" alt="Образование" class="section-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="section-icon-placeholder" style="display:none;">🎓</div>
+                </div>
+                <h2 class="section-title">Образование</h2>
+            </div>
             <div class="education-grid">
                 <div class="education-item">
                     <h3>Санкт-Петербургский Горный Университет</h3>
@@ -288,7 +244,13 @@
     <!-- Cases Section (Coming Soon) -->
     <section class="cases" id="cases">
         <div class="container">
-            <h2 class="section-title">Кейсы</h2>
+            <div class="section-header">
+                <div class="section-illustration">
+                    <img src="images/cases-icon.png" alt="Кейсы" class="section-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="section-icon-placeholder" style="display:none;">🧳</div>
+                </div>
+                <h2 class="section-title">Кейсы</h2>
+            </div>
             <div class="coming-soon">
                 <div class="coming-soon-icon">🚧</div>
                 <p>Раздел находится в разработке</p>
@@ -300,7 +262,13 @@
     <!-- Contacts Section -->
     <footer class="contacts" id="contacts">
         <div class="container">
-            <h2 class="section-title">Контакты</h2>
+            <div class="section-header">
+                <div class="section-illustration">
+                    <img src="images/contacts-icon.png" alt="Контакты" class="section-icon" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="section-icon-placeholder" style="display:none;">📞</div>
+                </div>
+                <h2 class="section-title">Контакты</h2>
+            </div>
             <div class="contact-links">
                 <a href="tel:+79217972732" class="contact-link">
                     <span class="contact-icon">📞</span>
@@ -362,7 +330,7 @@
         // Observe all cards and timeline items
         document.addEventListener('DOMContentLoaded', () => {
             const animatedElements = document.querySelectorAll(
-                '.about-card, .skill-category, .education-item, .timeline-item, .qa-widget, .tools-panel'
+                '.about-card, .skill-category, .education-item, .timeline-item, .tools-panel, .section-illustration'
             );
             
             animatedElements.forEach((el, index) => {
@@ -372,19 +340,164 @@
                 observer.observe(el);
             });
             
-            // Animate progress bar when in viewport
-            const progressBar = document.querySelector('.progress-fill');
-            if (progressBar) {
-                const progressObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // Progress bar animation is handled by CSS transition
-                            entry.target.style.width = '94.3%';
-                        }
-                    });
-                }, { threshold: 0.5 });
-                progressObserver.observe(progressBar);
+        });
+        
+        // Language switching functionality
+        const translations = {
+            ru: {
+                nav: {
+                    experience: 'Опыт работы',
+                    skills: 'Навыки',
+                    education: 'Образование',
+                    contacts: 'Контакты',
+                    cases: 'Кейсы'
+                },
+                header: {
+                    title: 'QA Engineer',
+                    tagline: 'QA Engineer с более чем 4 годами опыта. Специализируюсь на тестировании веб, мобильных и десктопных приложений. Выстраиваю процессы тестирования с нуля и автоматизирую их для повышения качества продукта.',
+                    btnExperience: 'Опыт работы',
+                    btnSkills: 'Навыки'
+                },
+                sections: {
+                    about: 'О себе',
+                    skills: 'Навыки',
+                    experience: 'Опыт работы',
+                    education: 'Образование',
+                    cases: 'Кейсы',
+                    contacts: 'Контакты'
+                },
+                about: {
+                    title1: '4+ Years Experience',
+                    text1: 'Более 4 лет опыта в тестировании веб, мобильных (iOS/Android) и десктопных приложений. Опыт работы единственным тестировщиком на проекте.',
+                    title2: 'Manual + Automation',
+                    text2: 'Выстраиваю процесс тестирования с нуля: разрабатываю тестовую стратегию, составляю планы тестирования. Пишу автотесты и интегрирую их в CI/CD пайплайн.',
+                    title3: 'Web, Mobile, API Testing',
+                    text3: 'Тестирование веб-приложений, мобильных приложений (iOS/Android), API (REST), интеграционное тестирование и работа с базами данных.'
+                },
+                download: 'Скачать резюме',
+                comingSoon: 'Раздел находится в разработке',
+                comingSoonSub: 'Скоро здесь появятся детальные кейсы проектов',
+                copyright: '© 2024 Татанов Артем. All rights reserved.'
+            },
+            en: {
+                nav: {
+                    experience: 'Experience',
+                    skills: 'Skills',
+                    education: 'Education',
+                    contacts: 'Contacts',
+                    cases: 'Cases'
+                },
+                header: {
+                    title: 'QA Engineer',
+                    tagline: 'QA Engineer with over 4 years of experience. Specializing in testing web, mobile, and desktop applications. Building testing processes from scratch and automating them to improve product quality.',
+                    btnExperience: 'Experience',
+                    btnSkills: 'Skills'
+                },
+                sections: {
+                    about: 'About Me',
+                    skills: 'Skills',
+                    experience: 'Experience',
+                    education: 'Education',
+                    cases: 'Cases',
+                    contacts: 'Contacts'
+                },
+                about: {
+                    title1: '4+ Years Experience',
+                    text1: 'Over 4 years of experience in testing web, mobile (iOS/Android), and desktop applications. Experience working as the only tester on a project.',
+                    title2: 'Manual + Automation',
+                    text2: 'Building testing processes from scratch: developing test strategies, creating test plans. Writing automated tests and integrating them into CI/CD pipeline.',
+                    title3: 'Web, Mobile, API Testing',
+                    text3: 'Testing web applications, mobile applications (iOS/Android), API (REST), integration testing, and working with databases.'
+                },
+                download: 'Download Resume',
+                comingSoon: 'Section is under development',
+                comingSoonSub: 'Detailed project cases will appear here soon',
+                copyright: '© 2024 Artem Tatanov. All rights reserved.'
             }
+        };
+        
+        function switchLanguage(lang) {
+            const t = translations[lang];
+            if (!t) return;
+            
+            // Update navigation
+            document.querySelector('a[href="#experience"]').textContent = t.nav.experience;
+            document.querySelector('a[href="#skills"]').textContent = t.nav.skills;
+            document.querySelector('a[href="#education"]').textContent = t.nav.education;
+            document.querySelector('a[href="#contacts"]').textContent = t.nav.contacts;
+            document.querySelector('a[href="#cases"]').textContent = t.nav.cases;
+            
+            // Update header
+            document.querySelector('.title').textContent = t.header.title;
+            if (lang === 'en') {
+                document.querySelector('.name').textContent = 'Artem Tatanov';
+            } else {
+                document.querySelector('.name').textContent = 'Татанов Артем';
+            }
+            document.querySelector('.tagline').textContent = t.header.tagline;
+            document.querySelector('.btn-primary').textContent = t.header.btnExperience;
+            document.querySelector('.btn-secondary').textContent = t.header.btnSkills;
+            
+            // Update section titles
+            document.querySelector('#about .section-title').textContent = t.sections.about;
+            document.querySelector('#skills .section-title').textContent = t.sections.skills;
+            document.querySelector('#experience .section-title').textContent = t.sections.experience;
+            document.querySelector('#education .section-title').textContent = t.sections.education;
+            document.querySelector('#cases .section-title').textContent = t.sections.cases;
+            document.querySelector('#contacts .section-title').textContent = t.sections.contacts;
+            
+            // Update about section
+            const aboutCards = document.querySelectorAll('.about-card');
+            if (aboutCards.length >= 3) {
+                aboutCards[0].querySelector('h3').textContent = t.about.title1;
+                aboutCards[0].querySelector('p').textContent = t.about.text1;
+                aboutCards[1].querySelector('h3').textContent = t.about.title2;
+                aboutCards[1].querySelector('p').textContent = t.about.text2;
+                aboutCards[2].querySelector('h3').textContent = t.about.title3;
+                aboutCards[2].querySelector('p').textContent = t.about.text3;
+            }
+            
+            // Update download button
+            document.querySelector('.btn-download span:last-child').textContent = t.download;
+            
+            // Update coming soon
+            const comingSoon = document.querySelector('.coming-soon p');
+            if (comingSoon) {
+                comingSoon.textContent = t.comingSoon;
+                if (comingSoon.nextElementSibling) {
+                    comingSoon.nextElementSibling.textContent = t.comingSoonSub;
+                }
+            }
+            
+            // Update copyright
+            const copyright = document.querySelector('.copyright');
+            if (copyright) {
+                copyright.textContent = t.copyright;
+            }
+            
+            // Update language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add('active');
+            
+            // Save language preference
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+        }
+        
+        // Initialize language
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('language') || 'ru';
+            switchLanguage(savedLang);
+            
+            // Language switcher buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const lang = btn.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
         });
     </script>
 </body>
