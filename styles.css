@@ -797,37 +797,140 @@ section {
 
 
 /* ============================================
-   CASES SECTION (Coming Soon)
+   CASES SECTION - Accordion
    ============================================ */
 
 .cases {
     background: var(--bg-secondary);
+    position: relative;
 }
 
-.coming-soon {
-    text-align: center;
-    padding: var(--spacing-2xl) var(--spacing-lg);
-    max-width: 600px;
-    margin: 0 auto;
+.cases-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.coming-soon-icon {
-    font-size: 4rem;
-    margin-bottom: var(--spacing-md);
-    opacity: 0.7;
-    animation: float 3s ease-in-out infinite;
+.case-item {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    overflow: hidden;
+    transition: all var(--transition-normal);
 }
 
-.coming-soon p {
+.case-item:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(99, 102, 241, 0.3);
+}
+
+.case-header {
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-md);
+    text-align: left;
+    transition: background var(--transition-normal);
+}
+
+.case-header:hover {
+    background: var(--bg-secondary);
+}
+
+.case-header:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: -3px;
+}
+
+.case-header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.case-number {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.case-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.case-toggle-icon {
     font-size: 1.2rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+    transition: transform var(--transition-normal);
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.coming-soon-subtitle {
+.case-header[aria-expanded="true"] .case-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.case-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 var(--spacing-xl);
+}
+
+.case-header[aria-expanded="true"] + .case-content {
+    max-height: 5000px;
+    padding: 0 var(--spacing-xl) var(--spacing-xl);
+}
+
+.case-text {
+    color: var(--text-secondary);
+    line-height: 1.8;
     font-size: 1rem;
-    color: var(--text-light);
-    font-style: italic;
+}
+
+.case-text p {
+    margin-bottom: var(--spacing-md);
+}
+
+.case-text p:last-child {
+    margin-bottom: 0;
+}
+
+.case-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.case-text ul {
+    margin: var(--spacing-md) 0;
+    padding-left: var(--spacing-lg);
+    list-style: disc;
+}
+
+.case-text li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-secondary);
 }
 
 /* ============================================
@@ -1337,6 +1440,27 @@ section {
     .timeline-content {
         padding: var(--spacing-md);
     }
+    
+    .cases-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .case-header {
+        padding: var(--spacing-md);
+        flex-wrap: wrap;
+    }
+    
+    .case-title {
+        font-size: 1.1rem;
+    }
+    
+    .case-content {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .case-header[aria-expanded="true"] + .case-content {
+        padding: 0 var(--spacing-md) var(--spacing-md);
+    }
 }
 
 /* ============================================
@@ -1357,7 +1481,8 @@ section {
 .btn:focus,
 .contact-link:focus,
 .nav-link:focus,
-.btn-download:focus {
+.btn-download:focus,
+.case-header:focus {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
 }
