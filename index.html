@@ -377,7 +377,57 @@
                 download: 'Скачать резюме',
                 comingSoon: 'Раздел находится в разработке',
                 comingSoonSub: 'Скоро здесь появятся детальные кейсы проектов',
-                copyright: '© 2024 Татанов Артем. All rights reserved.'
+                copyright: '© 2024 Татанов Артем. All rights reserved.',
+                experience: {
+                    job1: {
+                        company: 'Белая радуга',
+                        period: '05.2023 - настоящее время',
+                        title: 'QA Engineer',
+                        description: 'Выстраивание процесса тестирования с нуля, внедрение автотестов, тестирование мобильного приложения и API интеграций.',
+                        achievements: [
+                            'Обновлено более 1000 документов, повышение эффективности команды на 10%',
+                            'Снижение количества дефектов в прод до 0 через QA метрики и автотесты'
+                        ]
+                    },
+                    job2: {
+                        company: 'For you (Beauty APP)',
+                        period: '11.2022 - 09.2023',
+                        title: 'QA Engineer',
+                        description: 'Тестирование frontend и backend мобильного приложения, работа с эмуляторами и реальными устройствами (iOS/Android).',
+                        achievements: [
+                            'Повышение оценки приложения до 4.7 в AppStore и Google Play',
+                            'Снижение количества выходящих дефектов через улучшение документации'
+                        ]
+                    },
+                    job3: {
+                        company: 'Conversion Advocates',
+                        period: '07.2021 - 11.2022',
+                        title: 'QA Engineer',
+                        description: 'A/B тестирование e-commerce сайтов, ручное тестирование в BrowserStack, работа с JIRA и Clickup.',
+                        achievements: [
+                            'Снижение выходящих дефектов на 3% за 6 месяцев',
+                            'Уменьшение негативных обращений заказчиков на 5%'
+                        ]
+                    }
+                },
+                education: {
+                    edu1: {
+                        institution: 'Санкт-Петербургский Горный Университет',
+                        degree: 'Engineer'
+                    },
+                    edu2: {
+                        institution: '"Нетология"',
+                        degree: 'Вёрстка сайта (2021)'
+                    },
+                    edu3: {
+                        institution: '"QA Tester"',
+                        degree: 'Тестировщик ПО (2021)'
+                    },
+                    edu4: {
+                        institution: '"ProductStar"',
+                        degree: 'Автоматизация тестирования (2022-2023)'
+                    }
+                }
             },
             en: {
                 nav: {
@@ -412,7 +462,57 @@
                 download: 'Download Resume',
                 comingSoon: 'Section is under development',
                 comingSoonSub: 'Detailed project cases will appear here soon',
-                copyright: '© 2024 Artem Tatanov. All rights reserved.'
+                copyright: '© 2024 Artem Tatanov. All rights reserved.',
+                experience: {
+                    job1: {
+                        company: 'Belaya Raduga',
+                        period: '05.2023 - present',
+                        title: 'QA Engineer',
+                        description: 'Building testing processes from scratch, implementing automated tests, testing mobile applications and API integrations.',
+                        achievements: [
+                            'Updated over 1000 documents, increased team efficiency by 10%',
+                            'Reduced production defects to 0 through QA metrics and automated tests'
+                        ]
+                    },
+                    job2: {
+                        company: 'For you (Beauty APP)',
+                        period: '11.2022 - 09.2023',
+                        title: 'QA Engineer',
+                        description: 'Testing frontend and backend mobile applications, working with emulators and real devices (iOS/Android).',
+                        achievements: [
+                            'Increased app rating to 4.7 in AppStore and Google Play',
+                            'Reduced outgoing defects through improved documentation'
+                        ]
+                    },
+                    job3: {
+                        company: 'Conversion Advocates',
+                        period: '07.2021 - 11.2022',
+                        title: 'QA Engineer',
+                        description: 'A/B testing e-commerce websites, manual testing in BrowserStack, working with JIRA and Clickup.',
+                        achievements: [
+                            'Reduced outgoing defects by 3% over 6 months',
+                            'Decreased negative customer inquiries by 5%'
+                        ]
+                    }
+                },
+                education: {
+                    edu1: {
+                        institution: 'Saint Petersburg Mining University',
+                        degree: 'Engineer'
+                    },
+                    edu2: {
+                        institution: '"Netology"',
+                        degree: 'Website Layout (2021)'
+                    },
+                    edu3: {
+                        institution: '"QA Tester"',
+                        degree: 'Software Tester (2021)'
+                    },
+                    edu4: {
+                        institution: '"ProductStar"',
+                        degree: 'Test Automation (2022-2023)'
+                    }
+                }
             }
         };
         
@@ -494,6 +594,71 @@
             const copyright = document.querySelector('.copyright');
             if (copyright) {
                 copyright.textContent = t.copyright;
+            }
+            
+            // Update Experience section content
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            if (timelineItems.length >= 3) {
+                // Job 1
+                const job1 = timelineItems[0].querySelector('.timeline-content');
+                if (job1) {
+                    job1.querySelector('.job-header h3').textContent = t.experience.job1.company;
+                    job1.querySelector('.job-period').textContent = t.experience.job1.period;
+                    job1.querySelector('.job-title').textContent = t.experience.job1.title;
+                    job1.querySelector('.job-description').textContent = t.experience.job1.description;
+                    const achievements1 = job1.querySelectorAll('.job-achievements li');
+                    t.experience.job1.achievements.forEach((achievement, index) => {
+                        if (achievements1[index]) {
+                            achievements1[index].textContent = achievement;
+                        }
+                    });
+                }
+                
+                // Job 2
+                const job2 = timelineItems[1].querySelector('.timeline-content');
+                if (job2) {
+                    job2.querySelector('.job-header h3').textContent = t.experience.job2.company;
+                    job2.querySelector('.job-period').textContent = t.experience.job2.period;
+                    job2.querySelector('.job-title').textContent = t.experience.job2.title;
+                    job2.querySelector('.job-description').textContent = t.experience.job2.description;
+                    const achievements2 = job2.querySelectorAll('.job-achievements li');
+                    t.experience.job2.achievements.forEach((achievement, index) => {
+                        if (achievements2[index]) {
+                            achievements2[index].textContent = achievement;
+                        }
+                    });
+                }
+                
+                // Job 3
+                const job3 = timelineItems[2].querySelector('.timeline-content');
+                if (job3) {
+                    job3.querySelector('.job-header h3').textContent = t.experience.job3.company;
+                    job3.querySelector('.job-period').textContent = t.experience.job3.period;
+                    job3.querySelector('.job-title').textContent = t.experience.job3.title;
+                    job3.querySelector('.job-description').textContent = t.experience.job3.description;
+                    const achievements3 = job3.querySelectorAll('.job-achievements li');
+                    t.experience.job3.achievements.forEach((achievement, index) => {
+                        if (achievements3[index]) {
+                            achievements3[index].textContent = achievement;
+                        }
+                    });
+                }
+            }
+            
+            // Update Education section content
+            const educationItems = document.querySelectorAll('.education-item');
+            if (educationItems.length >= 4) {
+                educationItems[0].querySelector('h3').textContent = t.education.edu1.institution;
+                educationItems[0].querySelector('p').textContent = t.education.edu1.degree;
+                
+                educationItems[1].querySelector('h3').textContent = t.education.edu2.institution;
+                educationItems[1].querySelector('p').textContent = t.education.edu2.degree;
+                
+                educationItems[2].querySelector('h3').textContent = t.education.edu3.institution;
+                educationItems[2].querySelector('p').textContent = t.education.edu3.degree;
+                
+                educationItems[3].querySelector('h3').textContent = t.education.edu4.institution;
+                educationItems[3].querySelector('p').textContent = t.education.edu4.degree;
             }
             
             // Update language buttons
