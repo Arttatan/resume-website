@@ -420,7 +420,17 @@
             const t = translations[lang];
             if (!t) return;
             
-            // Update navigation
+            // Update navigation logo
+            const navLogo = document.querySelector('.nav-logo');
+            if (navLogo) {
+                if (lang === 'en') {
+                    navLogo.textContent = 'Artem Tatanov';
+                } else {
+                    navLogo.textContent = 'Татанов Артем';
+                }
+            }
+            
+            // Update navigation links
             document.querySelector('a[href="#experience"]').textContent = t.nav.experience;
             document.querySelector('a[href="#skills"]').textContent = t.nav.skills;
             document.querySelector('a[href="#education"]').textContent = t.nav.education;
@@ -438,13 +448,24 @@
             document.querySelector('.btn-primary').textContent = t.header.btnExperience;
             document.querySelector('.btn-secondary').textContent = t.header.btnSkills;
             
-            // Update section titles
-            document.querySelector('#about .section-title').textContent = t.sections.about;
-            document.querySelector('#skills .section-title').textContent = t.sections.skills;
-            document.querySelector('#experience .section-title').textContent = t.sections.experience;
-            document.querySelector('#education .section-title').textContent = t.sections.education;
-            document.querySelector('#cases .section-title').textContent = t.sections.cases;
-            document.querySelector('#contacts .section-title').textContent = t.sections.contacts;
+            // Update section titles - using more specific selectors
+            const aboutTitle = document.querySelector('#about .section-header .section-title');
+            if (aboutTitle) aboutTitle.textContent = t.sections.about;
+            
+            const skillsTitle = document.querySelector('#skills .section-header .section-title');
+            if (skillsTitle) skillsTitle.textContent = t.sections.skills;
+            
+            const experienceTitle = document.querySelector('#experience .section-header .section-title');
+            if (experienceTitle) experienceTitle.textContent = t.sections.experience;
+            
+            const educationTitle = document.querySelector('#education .section-header .section-title');
+            if (educationTitle) educationTitle.textContent = t.sections.education;
+            
+            const casesTitle = document.querySelector('#cases .section-header .section-title');
+            if (casesTitle) casesTitle.textContent = t.sections.cases;
+            
+            const contactsTitle = document.querySelector('#contacts .section-header .section-title');
+            if (contactsTitle) contactsTitle.textContent = t.sections.contacts;
             
             // Update about section
             const aboutCards = document.querySelectorAll('.about-card');
