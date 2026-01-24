@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">Татанов Артем</div>
+                <div class="nav-links">
+                    <a href="#experience" class="nav-link">Опыт работы</a>
+                    <a href="#skills" class="nav-link">Навыки</a>
+                    <a href="#education" class="nav-link">Образование</a>
+                    <a href="#contacts" class="nav-link">Контакты</a>
+                    <a href="#cases" class="nav-link nav-link-disabled" aria-disabled="true">Кейсы</a>
+                </div>
+                <a href="Татанов Артем QA Engineer.pdf" download class="btn-download">
+                    <span class="download-icon">📥</span>
+                    <span>Скачать резюме</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Header Section -->
     <header class="header">
         <div class="container">
@@ -80,24 +100,29 @@
                         <span class="skill-tag">Selenium</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Playwright</span>
                         <span class="skill-tag">CI/CD</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">JIRA</span>
-                        <span class="skill-tag">TestRail</span>
-                        <span class="skill-tag">YouTrack</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">BrowserStack</span>
-                        <span class="skill-tag">Android Studio</span>
-                        <span class="skill-tag">TestFlight</span>
-                        <span class="skill-tag">Confluence</span>
-                        <span class="skill-tag">Clickup</span>
-                    </div>
+            </div>
+            
+            <!-- Tools & Technologies - Horizontal Panel -->
+            <div class="tools-panel">
+                <h3 class="tools-title">Tools & Technologies</h3>
+                <div class="tools-grid">
+                    <span class="tool-badge">JIRA</span>
+                    <span class="tool-badge">TestRail</span>
+                    <span class="tool-badge">YouTrack</span>
+                    <span class="tool-badge">SQL</span>
+                    <span class="tool-badge">HTML/CSS</span>
+                    <span class="tool-badge">BrowserStack</span>
+                    <span class="tool-badge">Android Studio</span>
+                    <span class="tool-badge">TestFlight</span>
+                    <span class="tool-badge">Confluence</span>
+                    <span class="tool-badge">Clickup</span>
                 </div>
+            </div>
             </div>
         </div>
     </section>
@@ -161,6 +186,80 @@
         </div>
     </section>
 
+    <!-- QA Interactive Demo Section -->
+    <section class="qa-demo" id="qa-demo">
+        <div class="container">
+            <h2 class="section-title">QA в действии</h2>
+            <div class="qa-widgets">
+                <div class="qa-widget">
+                    <h3>Статус тестов</h3>
+                    <div class="test-status">
+                        <div class="status-item">
+                            <div class="status-indicator status-passed"></div>
+                            <span>Passed: <strong>247</strong></span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-indicator status-failed"></div>
+                            <span>Failed: <strong>3</strong></span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-indicator status-skipped"></div>
+                            <span>Skipped: <strong>12</strong></span>
+                        </div>
+                    </div>
+                    <div class="test-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 94.3%"></div>
+                        </div>
+                        <span class="progress-text">94.3% Success Rate</span>
+                    </div>
+                </div>
+                <div class="qa-widget">
+                    <h3>Чек-лист тестирования</h3>
+                    <div class="checklist">
+                        <label class="checklist-item">
+                            <input type="checkbox" checked disabled>
+                            <span>Функциональное тестирование</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" checked disabled>
+                            <span>Тестирование API</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" checked disabled>
+                            <span>Кросс-браузерное тестирование</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" checked disabled>
+                            <span>Мобильное тестирование</span>
+                        </label>
+                        <label class="checklist-item">
+                            <input type="checkbox" checked disabled>
+                            <span>Автоматизация тестов</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="qa-widget">
+                    <h3>Метрики качества</h3>
+                    <div class="metrics">
+                        <div class="metric-item">
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">Дефектов в продакшене</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">1000+</div>
+                            <div class="metric-label">Документов обновлено</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">10%</div>
+                            <div class="metric-label">Рост эффективности</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section class="education" id="education">
         <div class="container">
@@ -186,6 +285,18 @@
         </div>
     </section>
 
+    <!-- Cases Section (Coming Soon) -->
+    <section class="cases" id="cases">
+        <div class="container">
+            <h2 class="section-title">Кейсы</h2>
+            <div class="coming-soon">
+                <div class="coming-soon-icon">🚧</div>
+                <p>Раздел находится в разработке</p>
+                <p class="coming-soon-subtitle">Скоро здесь появятся детальные кейсы проектов</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contacts Section -->
     <footer class="contacts" id="contacts">
         <div class="container">
@@ -199,9 +310,10 @@
                     <span class="contact-icon">✉️</span>
                     <span>art.tatan@gmail.com</span>
                 </a>
-                <a href="https://t.me/arttatan" class="contact-link" target="_blank" rel="noopener">
+                <a href="https://t.me/artttatan" class="contact-link" target="_blank" rel="noopener">
                     <span class="contact-icon">💬</span>
-                    <span>@arttatan</span>
+                    <span>Telegram</span>
+                    <span class="contact-username">@artttatan</span>
                 </a>
                 <a href="https://github.com/Arttatan" class="contact-link" target="_blank" rel="noopener">
                     <span class="contact-icon">💻</span>
@@ -218,8 +330,8 @@
 
     <!-- Enhanced scripts -->
     <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Smooth scroll for anchor links (excluding disabled links)
+        document.querySelectorAll('a[href^="#"]:not(.nav-link-disabled)').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
@@ -250,7 +362,7 @@
         // Observe all cards and timeline items
         document.addEventListener('DOMContentLoaded', () => {
             const animatedElements = document.querySelectorAll(
-                '.about-card, .skill-category, .education-item, .timeline-item'
+                '.about-card, .skill-category, .education-item, .timeline-item, .qa-widget, .tools-panel'
             );
             
             animatedElements.forEach((el, index) => {
@@ -259,6 +371,20 @@
                 el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
                 observer.observe(el);
             });
+            
+            // Animate progress bar when in viewport
+            const progressBar = document.querySelector('.progress-fill');
+            if (progressBar) {
+                const progressObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Progress bar animation is handled by CSS transition
+                            entry.target.style.width = '94.3%';
+                        }
+                    });
+                }, { threshold: 0.5 });
+                progressObserver.observe(progressBar);
+            }
         });
     </script>
 </body>
