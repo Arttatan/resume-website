@@ -573,6 +573,8 @@
                     text3: 'Тестирование веб-приложений, мобильных приложений (iOS/Android), API (REST), интеграционное тестирование и работа с базами данных.'
                 },
                 download: 'Скачать резюме',
+                phone: '+7 (921) 797-27-32',
+                phoneHref: 'tel:+79217972732',
                 copyright: '© 2024 Татанов Артем. All rights reserved.',
                 cases: {
                     case1: {
@@ -683,6 +685,8 @@
                     text3: 'Testing web applications, mobile applications (iOS/Android), API (REST), integration testing, and working with databases.'
                 },
                 download: 'Download Resume',
+                phone: '+351 913957670',
+                phoneHref: 'tel:+351913957670',
                 copyright: '© 2024 Artem Tatanov. All rights reserved.',
                 cases: {
                     case1: {
@@ -828,6 +832,14 @@
             
             // Update download button
             document.querySelector('.btn-download span:last-child').textContent = t.download;
+            
+            // Update phone number in contacts
+            const phoneLink = document.querySelector('a[data-contact="phone"]');
+            if (phoneLink && t.phone) {
+                phoneLink.setAttribute('href', t.phoneHref);
+                const phoneSpan = phoneLink.querySelector('.phone-number');
+                if (phoneSpan) phoneSpan.textContent = t.phone;
+            }
             
             // Update Cases section
             const caseItems = document.querySelectorAll('.case-item');
