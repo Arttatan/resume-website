@@ -468,9 +468,9 @@
                 <h2 class="section-title">Контакты</h2>
             </div>
             <div class="contact-links">
-                <a href="tel:+79217972732" class="contact-link">
+                <a href="tel:+79217972732" class="contact-link" data-contact="phone">
                     <span class="contact-icon">📞</span>
-                    <span>+7 (921) 797-27-32</span>
+                    <span class="phone-number">+7 (921) 797-27-32</span>
                 </a>
                 <a href="mailto:art.tatan@gmail.com" class="contact-link">
                     <span class="contact-icon">✉️</span>
@@ -952,7 +952,7 @@
         
         // Initialize language and accordion
         document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('language') || 'ru';
+            const savedLang = localStorage.getItem('language') || 'en';
             switchLanguage(savedLang);
             
             // Language switcher buttons
