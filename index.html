@@ -24,7 +24,7 @@
                         <button class="lang-btn active" data-lang="ru">Rus</button>
                         <button class="lang-btn" data-lang="en">Eng</button>
                     </div>
-                    <a href="Tatanov Artem QA engineer.pdf" download class="btn-download">
+                    <a href="Artem_Tatanov_QA_Engineer_CV.pdf" download class="btn-download">
                         <span class="download-icon">📥</span>
                         <span>Скачать резюме</span>
                     </a>
@@ -728,7 +728,7 @@
                     text3: 'Testing web applications, mobile applications (iOS/Android), API (REST), integration testing, and working with databases.'
                 },
                 download: 'Download Resume',
-                resumeHref: 'Tatanov Artem QA engineer.pdf',
+                resumeHref: 'Artem_Tatanov_QA_Engineer_CV.pdf',
                 phone: '+351 913957670',
                 phoneHref: 'tel:+351913957670',
                 copyright: '© 2024 Artem Tatanov. All rights reserved.',
@@ -761,34 +761,84 @@
                 },
                 experience: {
                     job1: {
-                        company: 'Belaya Raduga',
-                        period: '05.2023 - present',
-                        title: 'QA Engineer',
-                        description: 'Building testing processes from scratch, implementing automated tests, testing mobile applications and API integrations.',
-                        achievements: [
-                            'Updated over 1000 documents, increased team efficiency by 10%',
-                            'Reduced production defects to 0 through QA metrics and automated tests'
-                        ]
+                        bodyHtml: `
+                            <div class="job-header job-header--detailed">
+                                <h3>QA Engineer · White Rainbow (dental clinic network)</h3>
+                                <span class="job-period">May 2023 – Present</span>
+                            </div>
+                            <p class="job-meta">Sole QA · Remote</p>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Test automation</h4>
+                                <ul class="job-list">
+                                    <li>Develop and maintain UI/E2E autotests (Playwright, TypeScript) and API/backend autotests (Node.js) for business-critical flows</li>
+                                    <li>Built and evolve the test framework: repo structure, reusable components, E2E regression suite</li>
+                                    <li>Integrated autotests into GitLab CI — automated runs on push/MR as part of the release process</li>
+                                    <li>Triage failing runs with developers; keep autotests up to date and stable across releases</li>
+                                    <li>Cut regression testing time by ~40% by automating high-risk checks</li>
+                                </ul>
+                            </div>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Manual QA & quality process</h4>
+                                <ul class="job-list">
+                                    <li>Established QA from scratch: strategy, plans, metrics, and documentation</li>
+                                    <li>Functional and regression testing of the mobile app (iOS/Android)</li>
+                                    <li>Supported React migration: API integrations, UI vs. Figma, SQL checks during data migration</li>
+                                    <li>Maintained 1000+ test cases and docs after major architecture changes</li>
+                                    <li>Partner with engineering, analytics, and support through the release cycle</li>
+                                </ul>
+                            </div>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Key results:</h4>
+                                <ul class="job-list">
+                                    <li>Near-zero post-release defects for 3 consecutive releases (QA metrics + CI autotests)</li>
+                                    <li>~10% team efficiency gain from up-to-date test documentation</li>
+                                    <li>Full regression coverage and QA process built from zero on a live product</li>
+                                </ul>
+                            </div>
+                        `
                     },
                     job2: {
-                        company: 'For you (Beauty APP)',
-                        period: '11.2022 - 09.2023',
-                        title: 'QA Engineer',
-                        description: 'Testing frontend and backend mobile applications, working with emulators and real devices (iOS/Android).',
-                        achievements: [
-                            'Increased app rating to 4.7 in AppStore and Google Play',
-                            'Reduced outgoing defects through improved documentation'
-                        ]
+                        bodyHtml: `
+                            <div class="job-header job-header--detailed">
+                                <h3>QA Engineer · For You (Beauty App, startup)</h3>
+                                <span class="job-period">Nov 2022 – Sep 2023</span>
+                            </div>
+                            <p class="job-meta">Remote</p>
+                            <ul class="job-list job-list--main">
+                                <li>End-to-end manual QA for iOS/Android: real devices, emulators, TestFlight</li>
+                                <li>API testing (Postman) and traffic analysis (Charles Proxy)</li>
+                                <li>Test plans, checklists, and cases; defects in Jira and ClickUp</li>
+                                <li>Release regression and sign-off; coordinated with engineering before user impact</li>
+                            </ul>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Key results:</h4>
+                                <ul class="job-list">
+                                    <li>4.7 average app rating on App Store and Google Play through release quality and documentation</li>
+                                    <li>Fewer production defects as the test suite matured</li>
+                                </ul>
+                            </div>
+                        `
                     },
                     job3: {
-                        company: 'Conversion Advocates',
-                        period: '07.2021 - 11.2022',
-                        title: 'QA Engineer',
-                        description: 'A/B testing e-commerce websites, manual testing in BrowserStack, working with JIRA and Clickup.',
-                        achievements: [
-                            'Reduced outgoing defects by 3% over 6 months',
-                            'Decreased negative customer inquiries by 5%'
-                        ]
+                        bodyHtml: `
+                            <div class="job-header job-header--detailed">
+                                <h3>QA Engineer · Conversion Advocates (A/B testing, e-commerce)</h3>
+                                <span class="job-period">Jul 2021 – Nov 2022</span>
+                            </div>
+                            <p class="job-meta">Remote</p>
+                            <ul class="job-list job-list--main">
+                                <li>Manual testing in BrowserStack; defect tracking in Jira</li>
+                                <li>API testing (Postman, REST); root-cause analysis with DevTools</li>
+                                <li>Test design techniques; task management in ClickUp</li>
+                                <li>Cross-functional work with developers, analysts, and designers</li>
+                            </ul>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Key results:</h4>
+                                <ul class="job-list">
+                                    <li>3% fewer production defects and 5% fewer negative client escalations (checklists and test cases)</li>
+                                </ul>
+                            </div>
+                        `
                     }
                 },
                 education: {
