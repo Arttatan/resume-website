@@ -1096,6 +1096,79 @@ section {
     transition: all var(--transition-normal);
 }
 
+/* Structured job content (resume-style blocks) */
+.job-header--detailed {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+}
+
+.job-header--detailed .job-period {
+    align-self: flex-start;
+    white-space: normal;
+}
+
+.job-meta {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.job-block {
+    margin-bottom: var(--spacing-md);
+}
+
+.job-block:last-child {
+    margin-bottom: 0;
+}
+
+.job-block-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.4;
+}
+
+.job-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 var(--spacing-sm) 0;
+}
+
+.job-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.65;
+    transition: color var(--transition-normal);
+}
+
+.job-list li:last-child {
+    margin-bottom: 0;
+}
+
+.job-list li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    color: var(--primary-color);
+    font-size: 0.65rem;
+    line-height: 1;
+}
+
+.job-list--main {
+    margin-bottom: var(--spacing-md);
+}
+
+.timeline-content:hover .job-list li {
+    color: var(--text-primary);
+}
+
 .timeline-content:hover .job-achievements li::before {
     transform: scale(1.2);
     color: var(--primary-dark);

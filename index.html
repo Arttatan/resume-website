@@ -160,17 +160,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>Белая радуга (сеть стоматологических клиник)</h3>
-                            <span class="job-period">май 2023 — настоящее время</span>
-                        </div>
-                        <p class="job-title">QA Engineer · единственный QA на проекте</p>
-                        <p class="job-description">Разработка и поддержка UI/E2E-автотестов на Playwright (TypeScript) и API/backend-автотестов на Node.js, интеграция в GitLab CI. Выстроил процесс тестирования с нуля: тестовая стратегия, планы, QA-метрики. Функциональное и регрессионное тестирование мобильного приложения (iOS/Android), тестирование при миграции на React, SQL-валидация данных.</p>
-                        <ul class="job-achievements">
-                            <li>Снижение пост-релизных дефектов до near zero на протяжении 3 релизов подряд (QA-метрики + автотесты в CI)</li>
-                            <li>Повышение эффективности команды на ~10% за счёт актуальной тестовой документации</li>
-                            <li>Сокращение времени регрессионного тестирования примерно на 40% за счёт автоматизации</li>
-                        </ul>
+                        <!-- Content injected by language switcher -->
                     </div>
                 </div>
 
@@ -178,16 +168,6 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>For you (Beauty APP, стартап)</h3>
-                            <span class="job-period">ноябрь 2022 — сентябрь 2023</span>
-                        </div>
-                        <p class="job-title">QA Engineer</p>
-                        <p class="job-description">End-to-end ручное QA мобильного приложения (iOS/Android): реальные устройства, эмуляторы, TestFlight. API-тестирование (Postman), Charles Proxy. Тест-планы, чек-листы, тест-кейсы; ведение дефектов в Jira и ClickUp.</p>
-                        <ul class="job-achievements">
-                            <li>Средняя оценка приложения 4.7 в App Store и Google Play</li>
-                            <li>Снижение выходящих дефектов при улучшении тестовой базы</li>
-                        </ul>
                     </div>
                 </div>
 
@@ -195,15 +175,6 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="job-header">
-                            <h3>Conversion Advocates (A/B-тестирование, e-commerce)</h3>
-                            <span class="job-period">июль 2021 — ноябрь 2022</span>
-                        </div>
-                        <p class="job-title">QA Engineer</p>
-                        <p class="job-description">Ручное тестирование в BrowserStack; регистрация и контроль дефектов в Jira. API-тестирование (Postman, REST), поиск причин дефектов через DevTools. Техники тест-дизайна; ведение задач в ClickUp.</p>
-                        <ul class="job-achievements">
-                            <li>Снижение выходящих дефектов на 3% и негативных обращений заказчиков на 5%</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -606,34 +577,84 @@
                 },
                 experience: {
                     job1: {
-                        company: 'Белая радуга (сеть стоматологических клиник)',
-                        period: 'май 2023 — настоящее время',
-                        title: 'QA Engineer · единственный QA на проекте',
-                        description: 'Разработка и поддержка UI/E2E-автотестов на Playwright (TypeScript) и API/backend-автотестов на Node.js, интеграция в GitLab CI. Выстроил процесс тестирования с нуля: тестовая стратегия, планы, QA-метрики. Функциональное и регрессионное тестирование мобильного приложения (iOS/Android), тестирование при миграции на React, SQL-валидация данных.',
-                        achievements: [
-                            'Снижение пост-релизных дефектов до near zero на протяжении 3 релизов подряд (QA-метрики + автотесты в CI)',
-                            'Повышение эффективности команды на ~10% за счёт актуальной тестовой документации',
-                            'Сокращение времени регрессионного тестирования примерно на 40% за счёт автоматизации'
-                        ]
+                        bodyHtml: `
+                            <div class="job-header job-header--detailed">
+                                <h3>QA Engineer · Белая радуга (сеть стоматологических клиник)</h3>
+                                <span class="job-period">октябрь 2023 — настоящее время</span>
+                            </div>
+                            <p class="job-meta">Единственный QA на проекте · удалённо</p>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Автоматизация</h4>
+                                <ul class="job-list">
+                                    <li>Разрабатываю и поддерживаю UI/E2E-автотесты на Playwright (TypeScript) и API/backend-автотесты на Node.js для критичных пользовательских сценариев</li>
+                                    <li>Построил и развиваю тестовый фреймворк: структура репозитория, переиспользуемые компоненты, регрессионный набор E2E</li>
+                                    <li>Интегрировал автотесты в GitLab CI — автоматический запуск в регулярном релизном процессе (push/MR)</li>
+                                    <li>Анализирую падения прогонов совместно с разработчиками, поддерживаю актуальность и стабильность автотестов</li>
+                                    <li>Сократил время регрессионного тестирования примерно на 40% за счёт автоматизации критичных проверок</li>
+                                </ul>
+                            </div>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Ручное тестирование и QA-процессы</h4>
+                                <ul class="job-list">
+                                    <li>Выстроил процесс тестирования с нуля: тестовая стратегия, планы, QA-метрики, документация</li>
+                                    <li>Функциональное и регрессионное тестирование мобильного приложения (iOS/Android)</li>
+                                    <li>Тестирование при миграции на React: API-интеграции, UI по макетам Figma, SQL-валидация данных</li>
+                                    <li>Актуализировал более 1000 тест-кейсов и документов после изменений архитектуры системы</li>
+                                    <li>Взаимодействие с разработчиками, аналитиками и поддержкой в релизном цикле</li>
+                                </ul>
+                            </div>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Ключевые результаты:</h4>
+                                <ul class="job-list">
+                                    <li>Снижение пост-релизных дефектов до near zero на протяжении 3 релизов подряд (метрики QA + автотесты в CI)</li>
+                                    <li>Повышение эффективности команды на ~10% за счёт актуальной тестовой документации</li>
+                                    <li>Полное покрытие регресса документацией и процессом с нуля на действующем продукте</li>
+                                </ul>
+                            </div>
+                        `
                     },
                     job2: {
-                        company: 'For you (Beauty APP, стартап)',
-                        period: 'ноябрь 2022 — сентябрь 2023',
-                        title: 'QA Engineer',
-                        description: 'End-to-end ручное QA мобильного приложения (iOS/Android): реальные устройства, эмуляторы, TestFlight. API-тестирование (Postman), Charles Proxy. Тест-планы, чек-листы, тест-кейсы; ведение дефектов в Jira и ClickUp.',
-                        achievements: [
-                            'Средняя оценка приложения 4.7 в App Store и Google Play',
-                            'Снижение выходящих дефектов при улучшении тестовой базы'
-                        ]
+                        bodyHtml: `
+                            <div class="job-header job-header--detailed">
+                                <h3>QA Engineer · For you (Beauty APP, стартап)</h3>
+                                <span class="job-period">ноябрь 2022 — сентябрь 2023</span>
+                            </div>
+                            <p class="job-meta">Удалённо</p>
+                            <ul class="job-list job-list--main">
+                                <li>End-to-end ручное QA мобильного приложения (iOS/Android): реальные устройства, эмуляторы, TestFlight</li>
+                                <li>API-тестирование (Postman), анализ трафика (Charles Proxy)</li>
+                                <li>Тест-планы, чек-листы, тест-кейсы; ведение дефектов в Jira и ClickUp</li>
+                                <li>Регресс и приёмка релизов; координация с разработкой до выхода багов к пользователям</li>
+                            </ul>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Ключевые результаты:</h4>
+                                <ul class="job-list">
+                                    <li>Средняя оценка приложения 4.7 в App Store и Google Play за счёт качества релизов и документации</li>
+                                    <li>Снижение выходящих дефектов при улучшении тестовой базы</li>
+                                </ul>
+                            </div>
+                        `
                     },
                     job3: {
-                        company: 'Conversion Advocates (A/B-тестирование, e-commerce)',
-                        period: 'июль 2021 — ноябрь 2022',
-                        title: 'QA Engineer',
-                        description: 'Ручное тестирование в BrowserStack; регистрация и контроль дефектов в Jira. API-тестирование (Postman, REST), поиск причин дефектов через DevTools. Техники тест-дизайна; ведение задач в ClickUp.',
-                        achievements: [
-                            'Снижение выходящих дефектов на 3% и негативных обращений заказчиков на 5%'
-                        ]
+                        bodyHtml: `
+                            <div class="job-header job-header--detailed">
+                                <h3>QA Engineer · Conversion Advocates (A/B-тестирование, e-commerce)</h3>
+                                <span class="job-period">июль 2021 — ноябрь 2022</span>
+                            </div>
+                            <p class="job-meta">Удалённо</p>
+                            <ul class="job-list job-list--main">
+                                <li>Ручное тестирование в BrowserStack; регистрация и контроль дефектов в Jira</li>
+                                <li>API-тестирование (Postman, REST), поиск причин дефектов через DevTools</li>
+                                <li>Техники тест-дизайна; ведение задач в ClickUp</li>
+                                <li>Взаимодействие с разработчиками, аналитиками и дизайнерами</li>
+                            </ul>
+                            <div class="job-block">
+                                <h4 class="job-block-title">Ключевые результаты:</h4>
+                                <ul class="job-list">
+                                    <li>Снижение выходящих дефектов на 3% и негативных обращений заказчиков на 5% (чек-листы и тест-кейсы)</li>
+                                </ul>
+                            </div>
+                        `
                     }
                 },
                 education: {
@@ -893,21 +914,28 @@
             }
             
             // Update Experience section content
+            function buildSimpleJobHtml(jobData) {
+                const achievements = jobData.achievements
+                    .map((item) => `<li>${item}</li>`)
+                    .join('');
+                return `
+                    <div class="job-header">
+                        <h3>${jobData.company}</h3>
+                        <span class="job-period">${jobData.period}</span>
+                    </div>
+                    <p class="job-title">${jobData.title}</p>
+                    <p class="job-description">${jobData.description}</p>
+                    <ul class="job-achievements">${achievements}</ul>
+                `;
+            }
+
             function updateJobExperience(jobContent, jobData) {
                 if (!jobContent || !jobData) return;
-                jobContent.querySelector('.job-header h3').textContent = jobData.company;
-                jobContent.querySelector('.job-period').textContent = jobData.period;
-                jobContent.querySelector('.job-title').textContent = jobData.title;
-                jobContent.querySelector('.job-description').textContent = jobData.description;
-                const achievementsList = jobContent.querySelector('.job-achievements');
-                if (achievementsList) {
-                    achievementsList.innerHTML = '';
-                    jobData.achievements.forEach((achievement) => {
-                        const li = document.createElement('li');
-                        li.textContent = achievement;
-                        achievementsList.appendChild(li);
-                    });
+                if (jobData.bodyHtml) {
+                    jobContent.innerHTML = jobData.bodyHtml;
+                    return;
                 }
+                jobContent.innerHTML = buildSimpleJobHtml(jobData);
             }
 
             const timelineItems = document.querySelectorAll('.timeline-item');
